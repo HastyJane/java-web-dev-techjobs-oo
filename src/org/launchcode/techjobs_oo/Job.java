@@ -88,18 +88,17 @@ public class Job {
 //methods
     public String toString() {
         String defaultValue = "Data not available";
-        String format = "/n ID: "
-                + this.id + "/n Name: "
+        return "\n ID: "
+                + this.id + "\n Name: "
                 + (this.name == null ? defaultValue : this.name)
-                + "/n Employer: "
+                + "\n Employer: "
                 + (this.employer.getValue() == null ? defaultValue : this.employer.getValue())
-                + "/n Location: "
+                + "\n Location: "
                 + (this.location.getValue() == null ? defaultValue : this.location.getValue())
-                + "/n Position Type: "
+                + "\n Position Type: "
                 + (this.positionType.getValue() == null ? defaultValue : this.positionType.getValue())
-                + "/n Core Competency: "
-                + (this.coreCompetency == null ? defaultValue : this.coreCompetency) + "/n";
-        return format;
+                + "\n Core Competency: "
+                + (this.coreCompetency == null ? defaultValue : this.coreCompetency) + "\n";
     }
 
 
