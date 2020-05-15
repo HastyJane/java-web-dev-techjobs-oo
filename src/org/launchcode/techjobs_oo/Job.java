@@ -85,6 +85,22 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
+//methods
+    public String toString() {
+        String defaultValue = "Data not available";
+        String format = "/n ID: "
+                + this.id + "/n Name: "
+                + (this.name == null ? defaultValue : this.name)
+                + "/n Employer: "
+                + (this.employer.getValue() == null ? defaultValue : this.employer.getValue())
+                + "/n Location: "
+                + (this.location.getValue() == null ? defaultValue : this.location.getValue())
+                + "/n Position Type: "
+                + (this.positionType.getValue() == null ? defaultValue : this.positionType.getValue())
+                + "/n Core Competency: "
+                + (this.coreCompetency == null ? defaultValue : this.coreCompetency) + "/n";
+        return format;
+    }
 
 
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
