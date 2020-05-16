@@ -53,13 +53,13 @@ class JobTest {
 
     @Test
     public void testToStringMethod() {
-       String tester = "/n ID: " + test_job_one.getId() + "/n Name: Bob/n Employer: Hardies/n Location: Dallas/n Position Type: NightShift/n Core Competency: Sweeping/n";
+       String tester = "\n ID: " + test_job_one.getId() + "\n Name: Bob\n Employer: Hardies\n Location: Dallas\n Position Type: NightShift\n Core Competency: Sweeping\n";
        assertEquals(tester, test_job_one.toString());
     }
 
     @Test
     public void testNullMethod() {
-        String tester = "/n ID: " + test_job_three.getId() + "/n Name: Bob/n Employer: Data not available/n Location: Dallas/n Position Type: NightShift/n Core Competency: Sweeping/n";
+        String tester = "\n ID: " + test_job_three.getId() + "\n Name: Bob\n Employer: Data not available\n Location: Dallas\n Position Type: NightShift\n Core Competency: Sweeping\n";
         assertEquals(tester, test_job_three.toString());
 
     }
