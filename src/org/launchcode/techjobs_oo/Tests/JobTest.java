@@ -24,7 +24,7 @@ class JobTest {
     public void setUp() {
         test_job_one = new Job("Bob", new Employer("Hardies"), new Location("Dallas"), new PositionType("NightShift"), new CoreCompetency("Sweeping"));
         test_job_two = new Job("Bob", new Employer("Hardies"), new Location("Dallas"), new PositionType("NightShift"), new CoreCompetency("Sweeping"));
-        test_job_three = new Job("Bob", new Employer(), new Location("Dallas"), new PositionType("NightShift"), new CoreCompetency("Sweeping"));
+        test_job_three = new Job("Bob", new Employer(), new Location("Dallas"), new PositionType(), new CoreCompetency("Sweeping"));
     }
 
     @AfterEach
@@ -59,7 +59,7 @@ class JobTest {
 
     @Test
     public void testNullMethod() {
-        String tester = "\n ID: " + test_job_three.getId() + "\n Name: Bob\n Employer: Data not available\n Location: Dallas\n Position Type: NightShift\n Core Competency: Sweeping\n";
+        String tester = "\n ID: " + test_job_three.getId() + "\n Name: Bob\n Employer: Data not available\n Location: Dallas\n Position Type: Data not available\n Core Competency: Sweeping\n";
         assertEquals(tester, test_job_three.toString());
 
     }
