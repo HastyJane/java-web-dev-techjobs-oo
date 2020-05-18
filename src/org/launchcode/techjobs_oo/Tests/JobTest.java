@@ -31,7 +31,7 @@ class JobTest {
     void tearDown() {
     }
     
-    @Tes
+    @Test
     public void testIdShouldIncrement() {
         assertFalse(test_job_one.getId() == test_job_two.getId());
         assertTrue(test_job_two.getId() == test_job_one.getId() + 1);
