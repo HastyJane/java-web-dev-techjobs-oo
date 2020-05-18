@@ -30,9 +30,9 @@ class JobTest {
     @AfterEach
     void tearDown() {
     }
-    // The following test should prove that A. id is incrementing and B. that they are not equal
-    @Test
-    public void IdShouldIncrement() {
+    
+    @Tes
+    public void testIdShouldIncrement() {
         assertFalse(test_job_one.getId() == test_job_two.getId());
         assertTrue(test_job_two.getId() == test_job_one.getId() + 1);
 
@@ -41,7 +41,6 @@ class JobTest {
     public void testJobsForEquality() {
         assertFalse(test_job_one.equals(test_job_two));
     }
-
     @Test
     public void testJobConstructorSetsAllFields() {
         assertEquals("Bob" ,test_job_one.getName());
@@ -50,13 +49,11 @@ class JobTest {
         assertEquals("NightShift" ,test_job_one.getPositionType().getValue());
         assertEquals("Sweeping", test_job_one.getCoreCompetency().getValue());
     }
-
     @Test
     public void testToStringMethod() {
        String tester = "\n ID: " + test_job_one.getId() + "\n Name: Bob\n Employer: Hardies\n Location: Dallas\n Position Type: NightShift\n Core Competency: Sweeping\n";
        assertEquals(tester, test_job_one.toString());
     }
-
     @Test
     public void testNullMethod() {
         String tester = "\n ID: " + test_job_three.getId() + "\n Name: Bob\n Employer: Data not available\n Location: Dallas\n Position Type: Data not available\n Core Competency: Sweeping\n";
